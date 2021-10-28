@@ -38,9 +38,9 @@ export default function Billing(props) {
             props.customer.billingCity && props.customer.billingCity.length > 3 &&
             props.customer.billingState && props.customer.billingState.length === 2 &&
             props.customer.billingZip && props.customer.billingZip.length === 5 &&
-            props.customer.billingccNumber && props.customer.billingccNumber.length === 16 &&
-            props.customer.billingSecurityCode && props.customer.billingSecurityCode.length === 3 &&
-            props.customer.billingExpiration && props.customer.billingExpiration.length === 7) {
+            props.customer.billingccNumber && props.customer.billingccNumber.length > 15 &&
+            props.customer.billingSecurityCode && props.customer.billingSecurityCode.length > 2 &&
+            props.customer.billingExpiration && props.customer.billingExpiration.length > 6) {
             props.setValidated(true)
         }
     }
